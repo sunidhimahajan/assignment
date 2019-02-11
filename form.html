@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>User Registration form</title>
+<style>
+legend {
+    text-align:center;
+ }
+form{
+text-align:center;
+padding-top:20px;
+    margin: 0 100px 0 100px;
+}
+    fieldset {
+        background:pink;
+    }
+label{
+color:blue;
+    font-weight: bold;
+}
+#btn{
+background-color:#E6E6FA;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+    <form action="#" onSubmit="return validation()">
+    <fieldset>
+        <legend><h1>Registration Form </h1></legend>
+<label>Username:</label>
+<input type="text" class="name" id="name"><br><br>
+<label>Password:</label>
+<input type="password" id="pw"><br><br>
+<label>Email id:</label>
+<input type="email"  id="eid"><br><br>
+<label>Mobile Number:</label>
+<input type="text" placeholder='Enter contact number' id="phn"><br><br>
+<input type="submit" name="submit" value="submit" id="btn">
+    </fieldset>
+</form>
+<script>
+function validation(){
+var name=document.getElementById('name').value;
+var pass=document.getElementById('pw').value;
+var email=document.getElementById('eid').value;
+var phone=document.getElementById('phn').value;
+if(name==''){
+window.alert("Please fill the name");
+}
+else if(name.length<=2) 
+{
+window.alert("Invalid Name");
+}
+else if(pass==''){
+window.alert("Please enter your password");
+}
+else if(email==''){
+window.alert("Please enter your email");
+}
+else if(email.value.indexOf('.',0)<0) 
+{
+window.alert("Invalid Email");
+}
+else if(phone=="")
+    {
+        window.alert("Please enter your phone number");
+    }
+else if(phone.length!=10)
+    {
+        window.alert("Invalid number");
+    }
+else {
+    window.alert("Form submitted");
+}
+}
+    </script>
+</body>
+</html>
+
