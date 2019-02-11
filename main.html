@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="style.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>Working with JavaScript DOM</title>
+</head>
+<body>
+<div id="wrapper">
+	<header>
+		<div id="page-banner">
+			<h1 class="title"> Moviemania</h1>
+				<p>Movies for Everyone</p>
+			<form id="search-movies">
+				<input type ="text" placeholder="Search movies ......" onkeyup="search()"/>
+			</form>
+		</div>
+	</header>
+	<div id="movie-list">
+		<h2 class="title">Movies to Watch</h2>
+		<ul>
+			<li>
+				<span class="name">welcome</span>
+				<span class="delete">Delete</span>
+			</li>
+			<li>
+				<span class="name">gully boy</span>
+				<span class="delete">Delete</span>
+			</li>				
+			<li>
+				<span class="name">pink</span>
+				<span class="delete">Delete</span>
+			</li>
+			<li>
+				<span class="name">kedarnath</span>
+				<span class="delete">Delete</span>
+			</li>	
+		</ul>
+	</div>
+	<form id="add-movie">
+		<input type="checkbox" id="hide" onclick="Hide()"/>
+			<label for="hide">Hide the List</label>
+			<input type ="text" placeholder="Add a movie.."/ id="input1">
+		<button class="submit">Add</button>
+	</form>
+</div>		
+<script src="app.js"></script>
+</body>
+</html>	
